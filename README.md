@@ -4,12 +4,12 @@
 This is a REST API testing framework created for the company YellowPaper as part of my assessment process. Therefore, it is meant for evaluation purposes only and I do not authorize it to be used in a different way. 
 
 ## Preconditions
-In order to run the testing framework, you must have the following tools installed in your local environment:
-- Docker Desktop.
-- Java 19.
-- Maven 3.9.0.
-- IntelliJ IDE
-- Git.
+In order to run the testing framework, you must have the following tools installed in your local environment. Click on each of them to see how to do so:
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/)
+- [Java 19](https://www.geeksforgeeks.org/download-and-install-java-development-kit-jdk-on-windows-mac-and-linux/?ref=rp)
+- [Maven 3.9.0.](https://www.baeldung.com/install-maven-on-windows-linux-mac)
+- [IntelliJ IDE](https://www.jetbrains.com/idea/download/download-thanks.html)
+- [Git.](https://git-scm.com/downloads)
 
 ## Architecture
 This REST API testing framework has been based on a simple and straightforward structure where you will find two layers only, the logic layer where classes contain the functions to execute the different REST API methods and the testing layer where the tests call the functions mentioned above and perform assertions to ensure the expected behavior of the APIs. These layers are the ones provided by Java by default.
