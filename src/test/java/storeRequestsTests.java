@@ -14,8 +14,8 @@ public class storeRequestsTests extends storeRequests {
     public void initializer(){
         RestAssured.baseURI = "http://localhost:8080/api/v3/store/order";
     }
-    @Test(description = "TC005 - This test verifies orders can be added" +
-            " successfully. The status code retrieved should be 200.")
+    @Test(description = "TC005 - Verify new orders can be added to the store successfully." +
+            " The status code retrieved should be 200.")
     public void ordersCanBeAddedToStoresSuccessfully(){
         String  requestBody = "{\n" +
                 "  \"id\": "+ORDER_ID+",\n" +
@@ -30,8 +30,8 @@ public class storeRequestsTests extends storeRequests {
         assertEquals(response.getStatusCode(), 200);
     }
 
-    @Test(description = "TC006 - This test verifies orders can not be added" +
-            " if the request body does not have required values. The status code retrieved should be 400.")
+    @Test(description = "TC006 - Verify new orders cannot be added to the store if the " +
+            " request body does not have required values. The status code retrieved should be 400.")
     public void ordersCanNotBeAddedToStoresWithoutProperRequiredBody(){
         String  requestBody = "{\n" +
                 "  \"id\": ,\n" +
@@ -48,7 +48,7 @@ public class storeRequestsTests extends storeRequests {
                 "Input error: unable to convert input to io.swagger.petstore.model.Order");
     }
 
-    @Test(description = "TC007 - This test verifies orders can be gotten by their Ids" +
+    @Test(description = "TC007 - Verify orders can be retrieved by their IDs successfully." +
             " The status code retrieved should be 200 and the order Id the one sent as parameter.")
     public void ordersCanBeGottenByTheCorrectId(){
         Response response = getOrderById(ORDER_ID);
@@ -57,7 +57,7 @@ public class storeRequestsTests extends storeRequests {
         assertEquals(response.getBody().xmlPath().getInt("order.petId"), PET_ID);
     }
 
-    @Test(description = "TC008 - This test verifies orders can not be gotten if their IDs do not exist." +
+    @Test(description = "TC008 - Verify orders can not be retrieved if the IDs do not exist." +
             " The status code retrieved should be 404.")
     public void ordersCanNotBeGottenByNonExistingIds(){
         Response response = getOrderById(NON_EXISTING_ORDER_ID);
